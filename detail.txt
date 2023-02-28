@@ -1,0 +1,34 @@
+https://dashboard.ccavenue.com/
+https://codescompanion.com/test-credit-card-account-numbers-for-online-payment-gateway/
+https://stripe.com/docs/connect/testing#:~:text=To%20test%20adding%20funds%20to,failure%20due%20to%20insufficient%20funds.
+
+<script src="https://gist.github.com/pratik60/6998245.js"></script>
+
+https://dashboard.ccavenue.com/merchantLogin.do?
+https://dashboard.ccavenue.com/settings/apiKeys.do
+
+merchant_id: 2110298
+access_code: AVWP23KB52BT68PWTB
+Working key: E8A7BA01F5762D00412348D468156BB1
+
+
+https://dashboard.ccavenue.com/web/genregistration.do?command=navigateGenericRegistration&reseller=CCAV
+
+
+service@ccavenue.com
+
+
+<form id="redirect" method="post" name="redirect" action="<%= @ccavenue_request_url %>">
+  <input type="hidden" name="encRequest" value="<%= @encRequest %>">
+  <input type="hidden" name="access_code" id="access_code" value="<%= @ccavenue_access_code %>">
+  <input type=hidden name=merchant_id value=<%= @CCAVENUE_MERCHANT_ID %>>
+  <input type=hidden name=redirect_url value="http://localhost:3000/">
+  <input type=hidden name=cancel_url value="http://localhost:3000/">
+  <button type="submit" class="btn btn-danger">Submit</button>
+</form>
+
+
+
+
+
+https://github.com/chidang/ccavenue_payment
