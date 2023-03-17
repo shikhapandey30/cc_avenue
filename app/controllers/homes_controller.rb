@@ -10,8 +10,8 @@ class HomesController < ApplicationController
         order_id: 'order-id-1',
         currency: 'INR',
         amount: '100',
-        redirect_url: 'http://www.bitterntec.com/',
-        cancel_url: 'http://www.bitterntec.com/'
+        redirect_url: "#{ENV["REDIRECT_URL"]}/transaction/ccavResponseHandler",
+        cancel_url: "#{ENV["REDIRECT_URL"]}/transaction/ccavResponseHandlerCancel"
 
     }
 

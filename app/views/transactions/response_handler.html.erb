@@ -5,7 +5,7 @@
 </head>
 <body>
 <%  
-  workingKey="EEF6E4B45E3762C6BEC933487EE88EC5"  #Put in the 32 Bit Working Key provided by CCAVENUES.   
+  workingKey=ENV["CCAVENUE_WORKING_KEY"]  #Put in the 32 Bit Working Key provided by CCAVENUES.   
   encResponse=params[:encResp]
   crypto = Crypto.new 
   decResp=crypto.decrypt(encResponse,workingKey);
