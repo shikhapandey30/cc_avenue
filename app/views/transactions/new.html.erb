@@ -2,7 +2,7 @@
 <head>
 </head>
 <body>
-	<form method="POST" name="customerData" action="/transaction/ccavRequestHandler">
+	<form method="POST" name="customerData" id="myform" action="/transaction/ccavRequestHandler" style="display: none;">
 		<table width="40%" height="1" border='1' align="center"><caption><font size="4" color="blue"><b>Integration Kit</b></font></caption></table>
 			<table width="40%" height="100" border='1' align="center">
 				<tr>
@@ -112,9 +112,36 @@
 		        </tr>
 	      	</table>
 	      </form>
-	</body>
+
+
+	      <div class="container">
+        <br/><br/>
+        <h3 class="h3"></h3>
+        <h3 class="h3"></h3>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="loader14">
+                    <div class="loader-inner">
+                        <div class="box-1"></div>
+                        <div class="box-2"></div>
+                        <div class="box-3"></div>
+                        <div class="box-4"></div>
+                    </div>
+                    <!-- <span class="text">Please Wait</span> -->
+                </div>
+            </div>
+        </div>
+        <br/><br/>
+    </div>
+
+
+</body>
 </html>
 <script type="text/javascript">
-	window.postMessage("Transaction New React Message Success");
-	window.ReactNativeWebView.postMessage("Transaction New React React Native Success");
+	$(document).ready(function(){
+		setTimeout(function() {
+        // $("#myform").trigger('submit.rails');
+		 	$("form").submit();
+     }, 1000);
+	});
 </script>
