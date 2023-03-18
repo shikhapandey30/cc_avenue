@@ -11,7 +11,7 @@ class TransactionsController < ApplicationController
 	end
 
 	def response1
-		@data = CcavenuePayment.decrypted_data(params['encResponse'])
+		@data = CcavenuePayment.decrypted_data(params['encResp'])
 		# Crypto.new.decrypt(params["encResp"], ENV["CCAVENUE_WORKING_KEY"])
 		# head :ok
 	end
