@@ -6,22 +6,22 @@ class HomesController < ApplicationController
   # GET /homes or /homes.json
   def index
     @homes = Home.all
-    data = {
-        order_id: 'order-id-1',
-        currency: 'INR',
-        amount: '100',
-        redirect_url: "#{ENV["REDIRECT_URL"]}/transaction/ccavResponseHandler",
-        cancel_url: "#{ENV["REDIRECT_URL"]}/transaction/ccavResponseHandlerCancel"
+    # data = {
+    #     order_id: 'order-id-1',
+    #     currency: 'INR',
+    #     amount: '100',
+    #     redirect_url: "#{ENV["REDIRECT_URL"]}/transaction/ccavResponseHandler",
+    #     cancel_url: "#{ENV["REDIRECT_URL"]}/transaction/ccavResponseHandlerCancel"
 
-    }
+    # }
 
-    # enc_request=63957FB55DD6E7B968A7588763E08B240878046EF2F520C44BBC63FB9CCE726209A4734877F5904445591304ABB2F5E598B951E39EAFB9A24584B00590ADB077ADE5E8C444EAC5A250B1EA96F68D22E44EA2515401C2CD753DBA91BD0E7DFE7341BE1E7B7550&access_code=AVWP23KB52BT68PWTB&command=confirmOrder&request_type=JSON&response_type=JSON&version=1.1
+    # # enc_request=63957FB55DD6E7B968A7588763E08B240878046EF2F520C44BBC63FB9CCE726209A4734877F5904445591304ABB2F5E598B951E39EAFB9A24584B00590ADB077ADE5E8C444EAC5A250B1EA96F68D22E44EA2515401C2CD753DBA91BD0E7DFE7341BE1E7B7550&access_code=AVWP23KB52BT68PWTB&command=confirmOrder&request_type=JSON&response_type=JSON&version=1.1
 
-    @encRequest = CcavenuePayment.encrypted_data(data)
+    # @encRequest = CcavenuePayment.encrypted_data(data)
     
-    @ccavenue_request_url = CcavenuePayment.request_url
-    @ccavenue_access_code = ENV.fetch('CCAVENUE_ACCESS_CODE').freeze
-    @CCAVENUE_MERCHANT_ID = ENV.fetch('CCAVENUE_MERCHANT_ID').freeze
+    # @ccavenue_request_url = CcavenuePayment.request_url
+    # @ccavenue_access_code = ENV.fetch('CCAVENUE_ACCESS_CODE').freeze
+    # @CCAVENUE_MERCHANT_ID = ENV.fetch('CCAVENUE_MERCHANT_ID').freeze
 
   end
 
