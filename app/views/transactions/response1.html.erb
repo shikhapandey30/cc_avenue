@@ -1,4 +1,5 @@
 <%= @json_data rescue nil %>
 <script type="text/javascript">
-	window.postMessage("Success");
+	window.postMessage("Response Success");
+	window.ReactNativeWebView.postMessage("Response React Native Success");
 </script>
