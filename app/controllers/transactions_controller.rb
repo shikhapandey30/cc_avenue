@@ -12,6 +12,12 @@ class TransactionsController < ApplicationController
 
 	def response1
 		@data = CcavenuePayment.decrypted_data(params['encResp'])
+		@json_data = {}
+		@data.split("&").each do |str|
+			str_array = str.split("=")
+			json_data[str_array[0]] = str_array[1] 
+		end
+
 		# Crypto.new.decrypt(params["encResp"], ENV["CCAVENUE_WORKING_KEY"])
 		# head :ok
 	end
