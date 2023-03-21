@@ -2,5 +2,5 @@
 <script type="text/javascript">
 	// window.postMessage("Response Success");
 	// window.ReactNativeWebView.postMessage("Failed");
-	window.ReactNativeWebView.postMessage("Success");
+	window.ReactNativeWebView.postMessage("<%= @json_data["order_status"].to_s %>");
 </script>
